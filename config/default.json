@@ -1,0 +1,61 @@
+{
+  "logs": {
+    "nodeJS": {
+      "operationalMonitoringLog": "/tmp/log/lgk/ops.log",
+      "serverLog": "/tmp/log/lgk/nodeJS"
+    },
+    "worker": "/tmp/log/lgk/worker.log",
+    "nginx": {
+      "accessLog": "/tmp/log/lgk/nginx.access.log",
+      "errorLog": "/tmp/log/lgk/nginx.error.log"
+    },
+    "level": "info",
+    "operationsMonitoringInterval": 60000,
+    "requestResponse": {
+      "collect": {
+        "request": "*",
+        "separator": "\n"
+      },
+      "path": "/tmp/log/lgk",
+      "log": "requestResponse.log"
+    }
+  },
+  "nodeJS": {
+    "websocket": {
+      "heartbeat": {
+        "interval": 30000,
+        "timeout": 15000
+      }
+    },
+    "host": "localhost",
+    "port": 8001
+  },
+  "nginx": {
+    "host": "localhost",
+    "httpsPort": 8000,
+    "httpPort": 8010,
+    "pid": "/tmp/run/lgk/nginx.pid",
+    "frontend": "/tmp/lgk/frontend",
+    "noWorkers": 1024
+  },
+  "services": {
+    "rabbitMQ": {
+      "url": "amqp://@localhost:5672",
+      "requestQ": "lgk/server/request",
+      "replyQ": "lgk/server/response",
+      "directExchangeName": "direct/lgk/server",
+      "fanoutRequestExchangeName": "fanout/lgk/server/request",
+      "fanoutReplyExchangeName": "fanout/lgk/server/reply"
+    },
+    "mongodb": {
+      "url": "mongodb://localhost:27017/api"
+    },
+    "redis": {
+      "url": "redis://localhost:6379",
+      "keyPrefix": "api"
+    }
+  },
+  "plugins": {
+    "dir": "/data/analytics/lgk/backend/server/plugins"
+  }
+}

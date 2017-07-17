@@ -1,0 +1,20 @@
+{
+    "apps": [
+        "packages/pan-theme/.sencha/temp/Themer"
+    ],
+    "frameworks": {
+        "ext": {
+            "path":"ext",
+            "version":"6.5.0.775"
+        }
+    },
+    "build": {
+        "dir": "${workspace.dir}/build"
+    },
+    "packages": {
+        "dir": "${workspace.dir}/packages,${workspace.dir}/../node_modules/@extjs"
+    },
+    "properties": {
+        "build.web.root": "${workspace.dir}/../"
+    }
+}

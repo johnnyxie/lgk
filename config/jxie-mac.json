@@ -1,0 +1,43 @@
+{
+  "plugins": {
+    "dir": "/Users/jxie/Work/lgk/backend/server/plugins"
+  },
+  "nginx": {
+    "pid": "/Users/jxie/Work/lgk/nginx/nginx.pid",
+    "frontend": "/Users/jxie/Work/lgk/frontend",
+    "noWorkers": 1
+  },
+  "logs": {
+    "nodeJS": {
+      "operationalMonitoringLog": "/Users/jxie/Work/lgk/logs/ops.log",
+      "serverLog": "/Users/jxie/Work/lgk/logs/nodeJS"
+    },
+    "worker": "/Users/jxie/Work/lgk/logs/worker.log",
+    "nginx": {
+      "accessLog": "/Users/jxie/Work/lgk/nginx/logs/nginx.access.log",
+      "errorLog": "/Users/jxie/Work/lgk/nginx/logs/nginx.error.log"
+    },
+    "level": "info",
+    "operationsMonitoringInterval": 60000,
+    "requestResponse": {
+      "collect": {
+        "request": "*",
+        "separator": "\n"
+      },
+      "path": "/Users/jxie/Work/lgk/logs",
+      "log": "requestResponse.log"
+    }
+  },
+  "services": {
+    "rabbitMQ": {
+      "requestQ": "jxie/lgk/server/request",
+      "replyQ": "jxie/lgk/server/response",
+      "directExchangeName": "jxie/direct/lgk/server",
+      "fanoutRequestExchangeName": "jxie/fanout/lgk/server/request",
+      "fanoutReplyExchangeName": "jxie/fanout/lgk/server/reply"
+    },
+    "redis": {
+      "keyPrefix": "jxie|api"
+    }
+  }
+}

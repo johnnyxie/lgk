@@ -1,0 +1,30 @@
+.pan-logo {
+    background-image: url('./resources/images/logo.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 70% 70%;
+    width: 45px;
+    height: 45px;
+}
+
+.pan-header-title {
+    color: #cdd5d5;
+    font-family: Lato, LatoWeb, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 38px;
+}
+
+.pan-header-text {
+    color: #cdd5d5;
+    font-family: Lato, LatoWeb, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+.pan-header-spacer {
+    border-right: 1px solid #9babb2;
+    margin-right: 10px;
+}
