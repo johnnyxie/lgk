@@ -9,7 +9,8 @@ brew install mongo
 brew services start mongodb
 
 npm install
-npm run debug
+npm run gen-nginx-conf
+npm run main
 
 # Zookeeper
 
