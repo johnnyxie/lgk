@@ -34,5 +34,3 @@ ext/
 # project related
 /frontend/build/
 /nginx/nginx.conf
-
-./package-lock.json
